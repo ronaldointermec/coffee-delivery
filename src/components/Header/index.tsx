@@ -1,5 +1,4 @@
 import { HeaderContainer, EstadoContainer, CartContainer } from "./styles";
-import logo from '../../assets/logo.svg'
 import { NavLink } from 'react-router-dom'
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
 
@@ -12,7 +11,7 @@ const count = 10;
         <HeaderContainer>
 
             <NavLink to="/" title="Coffe Delivery Screen">
-                <img src={logo} alt="" />
+                <img src='src/assets/logo.svg' alt="" />
             </NavLink>
 
             <div>

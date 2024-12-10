@@ -4,11 +4,6 @@ import conffees from '../../data/coffee.json'
 import { Card } from './components/Card'
 import { Coffees, Hero, HeroContent, Heading, Info } from './style'
 import { useTheme } from 'styled-components'
-import hero from '../../assets/images/hero.svg'
-import herobg from '../../assets/images/hero-bg.svg'
-
-
-
 
 export function Home() {
     const theme = useTheme()
@@ -69,9 +64,9 @@ export function Home() {
                         </div>
                     </Info>
                 </div>
-                <img src={hero} alt="Café do Coffee Delivery" />
+                <img src='src/assets/images/hero.svg' alt="Café do Coffee Delivery" />
                 </HeroContent>
-                <img src={herobg} id="hero-bg" alt="" />
+                <img src='src/assets/images/hero-bg.svg' id="hero-bg" alt="" />
                 </Hero>
                 <Coffees>
                     <h2>Nossos cafés</h2>
