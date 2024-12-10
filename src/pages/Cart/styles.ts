@@ -10,14 +10,14 @@ export const Container = styled.main`
   gap: 32px;
 `
 
-export const InfoContainerAddre = styled.div`
+export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
 
   h2 {
     ${fonts.titleXS};
-    color: ${( props ) => props.theme['base-subtitle']};
+    color: ${(  props ) =>  props.theme['base-subtitle'] };
   }
 
   > form {
@@ -30,7 +30,7 @@ export const InfoContainerAddre = styled.div`
 export const FormsContainer = styled.div`
   padding: 40px;
   border-radius: 6px;
-  background-color: ${( props ) => props.theme['base-card']};
+  background-color: ${(  props ) =>  props.theme['base-card']};
   width: 100%;
   min-width: 640px;
 
@@ -47,7 +47,7 @@ export const Heading = styled.div`
 
   div {
     span {
-      color: ${( props ) => props.theme['base-subtitle']};
+      color: ${(  props ) =>  props.theme['base-subtitle']};
     }
 
     p {
@@ -58,7 +58,7 @@ export const Heading = styled.div`
 
 export const AddressHeading = styled(Heading)`
   svg {
-    color: ${( props ) => props.theme['yellow-dark']};
+    color: ${(  props ) =>  props.theme['yellow-dark']};
   }
 `
 
@@ -77,7 +77,7 @@ export const PaymentContainer = styled(FormsContainer)``
 
 export const PaymentHeading = styled(Heading)`
   svg {
-    color: ${( props ) => props.theme.purple};
+    color: ${(  props ) =>  props.theme.purple};
   }
 `
 
@@ -126,7 +126,7 @@ export const CoffeeInfo = styled.div`
 
   > button {
     padding: 6px 8px;
-    background-color:${( props ) => props.theme['base-button']};
+    background-color: ${(  props ) =>  props.theme['base-button']};
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -135,17 +135,17 @@ export const CoffeeInfo = styled.div`
     transition: all 0.2s;
 
     &:hover {
-      background-color: ${( props ) => props.theme['base-hover']};
+      background-color: ${(  props ) =>  props.theme['base-hover']};
     }
 
     > svg {
-      color: ${( props ) => props.theme.purple};
+      color:${(  props ) =>  props.theme.purple};
     }
 
     > span {
       ${fonts.buttonM};
       text-transform: uppercase;
-      color: ${( props ) => props.theme['base-text']};
+      color: ${(  props ) =>  props.theme['base-text']};
     }
   }
 `
@@ -153,14 +153,14 @@ export const CoffeeInfo = styled.div`
 export const CartTotal = styled.div`
   padding: 40px;
   border-radius: 6px 36px;
-  background-color: ${( props ) => props.theme['base-card']};
+  background-color: ${(  props ) =>  props.theme['base-card']};
   width: 100%;
   min-width: 448px;
 
   > span {
     display: block;
     height: 1px;
-    background-color: ${( props ) => props.theme['base-button']};
+    background-color:${(  props ) =>  props.theme['base-button']};
     margin: 24px 0;
   }
 `
@@ -199,13 +199,13 @@ export const CheckoutButton = styled.button`
   text-transform: uppercase;
 
   ${fonts.buttonG};
-  color: ${( props ) => props.theme.white};
-  background-color: ${( props ) => props.theme.yellow};
+  color:${(  props ) =>  props.theme.white};
+  background-color:${(  props ) =>  props.theme.yellow};
 
   transition: all 0.2s;
 
   &:hover {
-    background-color:${( props ) => props.theme['yellow-dark']};
+    background-color: ${(  props ) =>  props.theme['yellow-dark']};
   }
 
   border-radius: 6px;

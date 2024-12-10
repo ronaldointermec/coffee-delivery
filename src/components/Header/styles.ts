@@ -1,77 +1,72 @@
-import styled from "styled-components";
+import styled from 'styled-components'
+
 import { fonts } from '../../styles/fonts'
 
-export const HeaderContainer = styled.header`
-display: flex;
-align-items: center;
-justify-content: space-between;
-div{
-    display:flex;
-    flex-direction: row;
-    gap: 1rem;
+export const Container = styled.header`
+  max-width: 1160px;
+  padding: 32px 20px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const Aside = styled.aside`
+  display: flex;
+  gap: 12px;
+
+  div {
+    display: flex;
     align-items: center;
-   
-}
-`
+    gap: 4px;
 
-export const EstadoContainer = styled.div`
-display: flex;
-align-items: center;
-gap: 0.5rem;
+    background-color: ${({ theme }) => theme['purple-light']};
 
-background-color: ${(props) => props.theme["purple-light"]};
-padding: 0.875rem;
-border-radius: 6px;
-span{
-    color: ${(props) => props.theme["purple-dark"]};
-    font-family: ${fonts.textS};
-    font-size: 12px;
-    white-space: nowrap;
-}
+    svg {
+      color: ${({ theme }) => theme.purple};
+    }
 
-svg{
-    color: ${(props) => props.theme.purple};
- 
-    padding: 0;
-    border: none;
-    margin: 0;
-}
-`
+    span {
+      color: ${({ theme }) => theme['purple-dark']};
+    }
 
-export const CartContainer = styled.div`
-  position: relative;
-  display: inline-block;
+    padding: 10px 8px;
+    border-radius: 6px;
+  }
 
   a {
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    background-color: ${({ theme }) => theme['yellow-light']};
+    color: ${({ theme }) => theme['yellow-dark']};
+
+    padding: 8px;
+    border-radius: 6px;
+
     position: relative;
-    width: 3.125rem; /* Ajustar conforme necessário */
-    height: 3.125rem;
-    background-color: ${(props) => props.theme["yellow-light"]}; /* Cor de fundo do container */
-    border-radius: 6px; /* Cantos arredondados */
-    text-decoration: none;
-  }
 
-  svg {
-    color:  ${(props) => props.theme["yellow-dark"]}; /* Cor do ícone do carrinho */
-  }
+    &[aria-disabled='true'] {
+      pointer-events: none;
+    }
 
-  span {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color:${(props) => props.theme["yellow-dark"]}; /* Cor do badge */
-    color: ${(props) => props.theme.background}; /* Cor do texto do badge */
-    font-family: ${fonts.textS};
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 1.25rem;
-    height: 1.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    span {
+      ${fonts.textS};
+      font-weight: bold;
+      color: ${({ theme }) => theme.white};
+      background-color: ${({ theme }) => theme['yellow-dark']};
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      transform: translate(50%, -50%);
+    }
   }
-`;
+`

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { fonts } from '../../../../styles/fonts'
+import {fonts } from '../../../styles/fonts'
 
 export const Box = styled.div`
   display: flex;
@@ -13,23 +13,23 @@ export const Container = styled.label`
   align-items: center;
   justify-content: space-between;
   border-radius: 6px;
-  border: 1px solid ${( props ) => props.theme['base-button']};
+  border: 1px solid ${({ theme }) => theme['base-button']};
   border-radius: 6px;
 
-  background-color: ${( props ) => props.theme['base-input']};
+  background-color: ${({ theme }) => theme['base-input']};
 
   transition: all 0.2s;
 
   &[data-state='focused'] {
-    border-color:${( props ) => props.theme['yellow-dark']};
+    border-color: ${({ theme }) => theme['yellow-dark']};
   }
 
   &[data-state='blurred'] {
-    border-color: ${( props ) => props.theme['base-button']};
+    border-color: ${({ theme }) => theme['base-button']};
   }
 
   input {
-    color: ${( props ) => props.theme['base-text']};
+    color: ${({ theme }) => theme['base-text']};
     width: 100%;
     background-color: transparent;
     border: none;
@@ -37,20 +37,20 @@ export const Container = styled.label`
     outline: none;
 
     &::placeholder {
-      color: ${( props ) => props.theme['base-label']};
+      color: ${({ theme }) => theme['base-label']};
     }
   }
 
   span {
-    color: ${( props ) => props.theme['base-label']};
+    color: ${({ theme }) => theme['base-label']};
     padding-right: 12px;
-   font-family: ${fonts.textS};
+    ${fonts.textS};
     font-style: italic;
   }
 `
 
 export const ErrorMessage = styled.p`
-  font-family: ${fonts.textXS};
+  ${fonts.textXS};
   font-weight: 400;
   color: red;
 `

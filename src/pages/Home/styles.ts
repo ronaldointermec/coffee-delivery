@@ -1,22 +1,22 @@
 import styled from 'styled-components'
 
-import {fonts} from '../../styles/fonts'
+import {fonts } from '../../styles/fonts'
 
 export const Hero = styled.section`
   position: relative;
 
-img#hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-height: 544px;
-  width: 100vw;
-  object-fit: cover;
+  img#hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 544px;
+    width: 100vw;
+    object-fit: cover;
   }
 `
 
 export const HeroContent = styled.div`
-max-width: 1160px;
+  max-width: 1160px;
   padding: 92px 20px;
   margin: 0 auto;
 
@@ -31,8 +31,9 @@ max-width: 1160px;
     gap: 66px;
   }
 `
+
 export const Heading = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
   gap: 16px;
 
@@ -46,6 +47,7 @@ display: flex;
     color: ${( props ) => props.theme['base-subtitle']}
   }
 `
+
 export const Info = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -63,8 +65,8 @@ export const Info = styled.div`
   }
 `
 
-export const Coffees = styled.section`
-  max-width: 74rem;
+export const CoffeeList = styled.section`
+  max-width: 1160px;
   padding: 32px 20px 150px;
   margin: 0 auto;
 

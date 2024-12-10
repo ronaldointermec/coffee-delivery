@@ -1,34 +1,32 @@
-import { HeaderContainer, EstadoContainer, CartContainer } from "./styles";
-import { NavLink } from 'react-router-dom'
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
+import { Link, NavLink } from 'react-router-dom'
 
+import { useCart } from '../../hooks/useCart'
+import { Aside, Container } from './styles'
 
 export function Header() {
-const count = 10;
+  const { cart } = useCart()
 
-    return (
+  return (
+    <Container>
 
-        <HeaderContainer>
+      <Link to="/">
+        <img src="src/assets/logo.svg" alt="Coffee Delivery" />
+      </Link>
 
-            <NavLink to="/" title="Coffe Delivery Screen">
-                <img src='src/assets/logo.svg' alt="" />
-            </NavLink>
+      <Aside>
+        <div>
+          <MapPin size={22} weight="fill" />
+          <span>Porto Alegre, RS</span>
+        </div>
 
-            <div>
-                <EstadoContainer>
-                    <MapPin size={22} weight="fill" />
-                    <span>Porto Alegre, RS</span>
-                </EstadoContainer>
-
-                <CartContainer>
-                    <NavLink to="/cart" title="Cart">
-                        <ShoppingCart size={22} weight="fill" />
-                        {count > 0 && <span>{count}</span>}
-                    </NavLink>
-                </CartContainer>
-            </div>
-
-
-        </HeaderContainer>
-    )
+      
+          <Link to='/cart' aria-disabled={cart.length === 0}>
+            <ShoppingCart size={22} weight="fill" />
+            {cart.length > 0 ? <span>{cart.length}</span> : null}
+          </Link>
+      
+      </Aside>
+    </Container>
+  )
 }

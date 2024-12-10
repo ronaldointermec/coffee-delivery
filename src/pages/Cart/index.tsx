@@ -31,7 +31,7 @@ import {
   PaymentErrorMessage,
   PaymentHeading,
   PaymentOptions,
-} from './style'
+} from './styles'
 
 type FormInputs = {
   cep: number
