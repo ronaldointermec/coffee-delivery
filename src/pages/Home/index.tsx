@@ -1,69 +1,86 @@
-import { ShoppingCart } from 'phosphor-react';
+
+import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import conffees from '../../data/coffee.json'
-import { HomeContainer, ConffeeCard, Container, Button, Counter,CoffeeList } from './style'
+import { Card } from './components/Card'
+import { Coffees, Hero, HeroContent, Heading, Info } from './style'
+import { useTheme } from 'styled-components'
+import hero from '../../assets/images/hero.svg'
+import herobg from '../../assets/images/hero-bg.svg'
 
 
-// interface Props {
-
-//     id: string
-//     title: string
-//     description: string
-//     tags: []
-//     price: number,
-//     image: string
-// }
 
 
 export function Home() {
-
-    const id = "0";
-    const title = "Expresso Tradicional";
-    const description = "O tradicional café feito com água quente e grãos moídos";
-    const tags = ["tradicional"];
-    const price = 9.90;
-    const image = "src/assets/images/coffees/expresso.png";
-
+    const theme = useTheme()
     return (
-        <HomeContainer>
+        <div>
+        <Hero>
+            <HeroContent>
+                <div>
+                    <Heading>
 
+                        <h1>Encontre o café perfeito para qualquer hora do dia</h1>
 
-            {conffees.coffees.map(coffee => (
-                <ConffeeCard>
-                    <img src={coffee.image} alt="" />
-                    <span>{coffee.tags[0].toUpperCase()}</span>
+                        <span>
+                            Com o Coffee Delivery você recebe seu café onde estiver, a
+                            qualquer hora
+                        </span>
+                    </Heading>
 
-                    <strong>{coffee.title}</strong>
+                    <Info>
+                        <div>
+                            <ShoppingCart
+                                size={32}
+                                weight="fill"
+                                color={theme.background}
+                                style={{ backgroundColor: theme['yellow-dark'] }}
+                            />
+                            <span>Compra simples e segura</span>
+                        </div>
 
-                    <p>{coffee.description}</p>
+                        <div>
+                            <Package
+                                size={32}
+                                weight="fill"
+                                color={theme.background}
+                                style={{ backgroundColor: theme['base-text'] }}
+                            />
+                            <span>Embalagem mantém o café intacto</span>
+                        </div>
 
+                        <div>
+                            <Timer
+                                size={32}
+                                weight="fill"
+                                color={theme.background}
+                                style={{ backgroundColor: theme.yellow }}
+                            />
+                            <span>Entrega rápida e rastreada</span>
+                        </div>
+
+                        <div>
+                            <Coffee
+                                size={32}
+                                weight="fill"
+                                color={theme.background}
+                                style={{ backgroundColor: theme.purple }}
+                            />
+                            <span>O café chega fresquinho até você</span>
+                        </div>
+                    </Info>
+                </div>
+                <img src={hero} alt="Café do Coffee Delivery" />
+                </HeroContent>
+                <img src={herobg} id="hero-bg" alt="" />
+                </Hero>
+                <Coffees>
+                    <h2>Nossos cafés</h2>
                     <div>
-                        <p>R$ <strong>{coffee.price}</strong></p>
-                        <Container>
-                            <Button >-</Button>
-                            <Counter>1</Counter>
-                            <Button >+</Button>
-                        </Container>
-                        <ShoppingCart size={22} weight="fill" />
+                        {conffees.coffees.map(coffee => (
+                            <Card key={coffee.id} coffee={coffee} />
+                        ))}
                     </div>
-                </ConffeeCard>
-            ))}
-
-
-
-
-        </HomeContainer>
-
-        // <HomeContainer>
-
-        //     <ol>
-        //         {conffees.coffees.map(coffee => (
-        //             <div>
-        //                 <h1>{coffee.title}</h1>
-        //                 <li><img src={coffee.image} alt="" /></li>
-        //             </div>
-        //         ))}
-
-        //     </ol>
-        // </HomeContainer>
+                </Coffees>      
+        </div>
     )
 }
