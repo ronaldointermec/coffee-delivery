@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {fonts } from '../../styles/fonts'
+import { mixins } from '../../styles/mixins'
 
 export const Hero = styled.section`
   position: relative;
@@ -38,13 +38,13 @@ export const Heading = styled.div`
   gap: 16px;
 
   > h1 {
-    ${fonts.titleXL}
-    color: ${( props ) => props.theme['base-title']}
+    ${mixins.fonts.titleXL}
+    color: ${({ theme }) => theme.colors['base-title']}
   }
 
   > span {
-    ${fonts.textL}
-    color: ${( props ) => props.theme['base-subtitle']}
+    ${mixins.fonts.textL}
+    color: ${({ theme }) => theme.colors['base-subtitle']}
   }
 `
 
@@ -75,8 +75,8 @@ export const CoffeeList = styled.section`
   gap: 54px;
 
   > h2 {
-    ${fonts.titleL}
-    color: ${( props ) => props.theme['base-subtitle']}
+    ${mixins.fonts.titleL}
+    color: ${({ theme }) => theme.colors['base-subtitle']}
   }
 
   > div {

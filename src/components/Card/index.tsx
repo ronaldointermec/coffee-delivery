@@ -96,10 +96,10 @@ export function Card({ coffee }: Props) {
               <CheckFat
                 weight="fill"
                 size={22}
-                color={theme['base-card']}
+                color={theme.colors['base-card']}
               />
             ) : (
-              <ShoppingCart size={22} color={theme['base-card']} />
+              <ShoppingCart size={22} color={theme.colors['base-card']} />
             )}
           </button>
         </Order>

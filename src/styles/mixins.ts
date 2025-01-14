@@ -1,8 +1,8 @@
 import { css } from 'styled-components'
 
-export const fonts = {
-  
-  titleXL: css`
+export const mixins = {
+  fonts: {
+    titleXL: css`
       font-family: 'Baloo 2', sans-serif;
       font-size: 3rem;
       line-height: 130%;
@@ -85,5 +85,5 @@ export const fonts = {
       line-height: 160%;
       font-weight: 400;
     `,
-  
+  },
 }

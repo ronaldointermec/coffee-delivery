@@ -1,5 +1,5 @@
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { useCart } from '../../hooks/useCart'
 import { Aside, Container } from './styles'
@@ -9,9 +9,8 @@ export function Header() {
 
   return (
     <Container>
-
       <Link to="/">
-        <img src="src/assets/logo.svg" alt="Coffee Delivery" />
+        <img src="/logo.svg" alt="Coffee Delivery" />
       </Link>
 
       <Aside>
@@ -20,12 +19,10 @@ export function Header() {
           <span>Porto Alegre, RS</span>
         </div>
 
-      
-          <Link to='/cart' aria-disabled={cart.length === 0}>
-            <ShoppingCart size={22} weight="fill" />
-            {cart.length > 0 ? <span>{cart.length}</span> : null}
-          </Link>
-      
+        <Link to={`cart`} aria-disabled={cart.length === 0}>
+          <ShoppingCart size={22} weight="fill" />
+          {cart.length > 0 ? <span>{cart.length}</span> : null}
+        </Link>
       </Aside>
     </Container>
   )

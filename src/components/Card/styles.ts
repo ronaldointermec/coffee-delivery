@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import { fonts } from '../../styles/fonts'
+import { mixins } from '../../styles/mixins'
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => theme['base-card']};
+  background-color: ${({ theme }) => theme.colors['base-card']};
   padding: 0 20px 20px;
   border-radius: 6px 36px;
   width: 256px;
@@ -32,26 +32,26 @@ export const Tags = styled.div`
   span {
     padding: 4px 8px;
     border-radius: 100px;
-    background-color: ${({ theme }) => theme['yellow-light']};
-    color: ${({ theme }) => theme['yellow-dark']};
+    background-color: ${({ theme }) => theme.colors['yellow-light']};
+    color: ${({ theme }) => theme.colors['yellow-dark']};
     text-transform: uppercase;
-    ${fonts.tag}
+    ${mixins.fonts.tag}
   }
 `
 
 export const Title = styled.h3`
   margin-top: 16px;
 
-  color: ${({ theme }) => theme['base-subtitle']};
-  ${fonts.titleS}
+  color: ${({ theme }) => theme.colors['base-subtitle']};
+  ${mixins.fonts.titleS}
 `
 
 export const Description = styled.span`
   margin-top: 8px;
   width: 100%;
 
-  color: ${({ theme }) => theme['base-label']};
-  ${fonts.textS}
+  color: ${({ theme }) => theme.colors['base-label']};
+  ${mixins.fonts.textS}
 `
 
 export const Control = styled.div`
@@ -68,13 +68,13 @@ export const Price = styled.div`
   gap: 2px;
 
   span:first-child {
-    ${fonts.textS};
-    color: ${({ theme }) => theme['base-text']};
+    ${mixins.fonts.textS};
+    color: ${({ theme }) => theme.colors['base-text']};
   }
 
   span:last-child {
-    ${fonts.titleM};
-    color: ${({ theme }) => theme['base-text']};
+    ${mixins.fonts.titleM};
+    color: ${({ theme }) => theme.colors['base-text']};
   }
 `
 
@@ -85,7 +85,7 @@ export const Order = styled.div<{ $itemAdded?: boolean }>`
 
   > button {
     background-color: ${({ theme, $itemAdded }) =>
-      $itemAdded ? theme['yellow-dark'] : theme['purple-dark']};
+      $itemAdded ? theme.colors['yellow-dark'] : theme.colors['purple-dark']};
     transition: background-color 0.2s;
     border-radius: 6px;
     padding: 8px;
@@ -93,7 +93,7 @@ export const Order = styled.div<{ $itemAdded?: boolean }>`
 
     &:hover {
       background-color: ${({ theme, $itemAdded }) =>
-        $itemAdded ? theme.yellow : theme.purple};
+        $itemAdded ? theme.colors.yellow : theme.colors.purple};
     }
   }
 `

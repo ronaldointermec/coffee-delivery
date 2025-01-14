@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { fonts } from '../../styles/fonts'
+import { mixins } from '../../styles/mixins'
 
 export const Container = styled.main`
   display: flex;
@@ -16,8 +16,8 @@ export const InfoContainer = styled.div`
   gap: 16px;
 
   h2 {
-    ${fonts.titleXS};
-    color: ${(  props ) =>  props.theme['base-subtitle'] };
+    ${mixins.fonts.titleXS};
+    color: ${({ theme }) => theme.colors['base-subtitle']};
   }
 
   > form {
@@ -30,7 +30,7 @@ export const InfoContainer = styled.div`
 export const FormsContainer = styled.div`
   padding: 40px;
   border-radius: 6px;
-  background-color: ${(  props ) =>  props.theme['base-card']};
+  background-color: ${({ theme }) => theme.colors['base-card']};
   width: 100%;
   min-width: 640px;
 
@@ -47,18 +47,18 @@ export const Heading = styled.div`
 
   div {
     span {
-      color: ${(  props ) =>  props.theme['base-subtitle']};
+      color: ${({ theme }) => theme.colors['base-subtitle']};
     }
 
     p {
-      ${fonts.textS};
+      ${mixins.fonts.textS};
     }
   }
 `
 
 export const AddressHeading = styled(Heading)`
   svg {
-    color: ${(  props ) =>  props.theme['yellow-dark']};
+    color: ${({ theme }) => theme.colors['yellow-dark']};
   }
 `
 
@@ -77,7 +77,7 @@ export const PaymentContainer = styled(FormsContainer)``
 
 export const PaymentHeading = styled(Heading)`
   svg {
-    color: ${(  props ) =>  props.theme.purple};
+    color: ${({ theme }) => theme.colors.purple};
   }
 `
 
@@ -126,7 +126,7 @@ export const CoffeeInfo = styled.div`
 
   > button {
     padding: 6px 8px;
-    background-color: ${(  props ) =>  props.theme['base-button']};
+    background-color: ${({ theme }) => theme.colors['base-button']};
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -135,17 +135,17 @@ export const CoffeeInfo = styled.div`
     transition: all 0.2s;
 
     &:hover {
-      background-color: ${(  props ) =>  props.theme['base-hover']};
+      background-color: ${({ theme }) => theme.colors['base-hover']};
     }
 
     > svg {
-      color:${(  props ) =>  props.theme.purple};
+      color: ${({ theme }) => theme.colors.purple};
     }
 
     > span {
-      ${fonts.buttonM};
+      ${mixins.fonts.buttonM};
       text-transform: uppercase;
-      color: ${(  props ) =>  props.theme['base-text']};
+      color: ${({ theme }) => theme.colors['base-text']};
     }
   }
 `
@@ -153,14 +153,14 @@ export const CoffeeInfo = styled.div`
 export const CartTotal = styled.div`
   padding: 40px;
   border-radius: 6px 36px;
-  background-color: ${(  props ) =>  props.theme['base-card']};
+  background-color: ${({ theme }) => theme.colors['base-card']};
   width: 100%;
   min-width: 448px;
 
   > span {
     display: block;
     height: 1px;
-    background-color:${(  props ) =>  props.theme['base-button']};
+    background-color: ${({ theme }) => theme.colors['base-button']};
     margin: 24px 0;
   }
 `
@@ -176,17 +176,17 @@ export const CartTotalInfo = styled.div`
     justify-content: space-between;
 
     span:first-child {
-      ${fonts.textS};
+      ${mixins.fonts.textS};
     }
 
     span:last-child {
-      ${fonts.textM};
+      ${mixins.fonts.textM};
     }
   }
 
   div:last-child {
     span {
-      ${fonts.textL};
+      ${mixins.fonts.textL};
       font-weight: bold;
     }
   }
@@ -198,21 +198,21 @@ export const CheckoutButton = styled.button`
   padding: 12px;
   text-transform: uppercase;
 
-  ${fonts.buttonG};
-  color:${(  props ) =>  props.theme.white};
-  background-color:${(  props ) =>  props.theme.yellow};
+  ${mixins.fonts.buttonG};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.yellow};
 
   transition: all 0.2s;
 
   &:hover {
-    background-color: ${(  props ) =>  props.theme['yellow-dark']};
+    background-color: ${({ theme }) => theme.colors['yellow-dark']};
   }
 
   border-radius: 6px;
 `
 
 export const PaymentErrorMessage = styled.p`
-  ${fonts.textXS};
+  ${mixins.fonts.textXS};
   font-weight: 400;
   color: red;
 `

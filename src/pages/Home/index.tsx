@@ -1,7 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
 import { Card } from '../../components/Card'
-import { coffees } from '../../data/coffee.json'
+import { coffees } from '../../../data.json'
 import { CoffeeList, Heading, Hero, HeroContent, Info } from './styles'
 
 export function Home() {
@@ -26,8 +26,8 @@ export function Home() {
                 <ShoppingCart
                   size={32}
                   weight="fill"
-                  color={theme.background}
-                  style={{ backgroundColor: theme['yellow-dark'] }}
+                  color={theme.colors.background}
+                  style={{ backgroundColor: theme.colors['yellow-dark'] }}
                 />
                 <span>Compra simples e segura</span>
               </div>
@@ -36,8 +36,8 @@ export function Home() {
                 <Package
                   size={32}
                   weight="fill"
-                  color={theme.background}
-                  style={{ backgroundColor: theme['base-text'] }}
+                  color={theme.colors.background}
+                  style={{ backgroundColor: theme.colors['base-text'] }}
                 />
                 <span>Embalagem mantém o café intacto</span>
               </div>
@@ -46,8 +46,8 @@ export function Home() {
                 <Timer
                   size={32}
                   weight="fill"
-                  color={theme.background}
-                  style={{ backgroundColor: theme.yellow }}
+                  color={theme.colors.background}
+                  style={{ backgroundColor: theme.colors.yellow }}
                 />
                 <span>Entrega rápida e rastreada</span>
               </div>
@@ -56,18 +56,18 @@ export function Home() {
                 <Coffee
                   size={32}
                   weight="fill"
-                  color={theme.background}
-                  style={{ backgroundColor: theme.purple }}
+                  color={theme.colors.background}
+                  style={{ backgroundColor: theme.colors.purple }}
                 />
                 <span>O café chega fresquinho até você</span>
               </div>
             </Info>
           </div>
 
-          <img src="src/assets/images/hero.svg" alt="Café do Coffee Delivery" />
+          <img src="/images/hero.svg" alt="Café do Coffee Delivery" />
         </HeroContent>
 
-        <img src="src/assets/images/hero-bg.svg" id="hero-bg" alt="" />
+        <img src="/images/hero-bg.svg" id="hero-bg" alt="" />
       </Hero>
 
       <CoffeeList>

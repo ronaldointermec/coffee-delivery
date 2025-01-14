@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { fonts } from '../../styles/fonts'
+import { mixins } from '../../styles/mixins'
 
 export const Container = styled.main`
   display: flex;
@@ -28,13 +28,13 @@ export const Heading = styled.div`
   gap: 4px;
 
   h2 {
-    ${fonts.titleL};
-    color: ${( props ) => props.theme['yellow-dark']};
+    ${mixins.fonts.titleL};
+    color: ${({ theme }) => theme.colors['yellow-dark']};
   }
 
   span {
-    ${fonts.textL};
-    color:${( props ) => props.theme['base-subtitle']};
+    ${mixins.fonts.textL};
+    color: ${({ theme }) => theme.colors['base-subtitle']};
   }
 `
 
@@ -46,7 +46,7 @@ export const Info = styled.div`
   border-color: transparent;
   background-origin: border-box;
   background-image: ${({ theme }) =>
-    `linear-gradient(to bottom right, ${theme.yellow}, ${theme.purple})`};
+    `linear-gradient(to bottom right, ${theme.colors.yellow}, ${theme.colors.purple})`};
 `
 
 export const InfoContent = styled.div`

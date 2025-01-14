@@ -11,7 +11,7 @@ import {
   Trash,
 } from '@phosphor-icons/react'
 
-import { coffees } from '../../data/coffee.json'
+import { coffees } from '../../../data.json'
 import { useCart } from '../../hooks/useCart'
 import { QuantityInput } from '../../components/Form/QuantityInput'
 import { TextInput } from '../../components/Form/TextInput'

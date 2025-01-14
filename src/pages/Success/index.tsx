@@ -32,8 +32,8 @@ export function Success() {
           <InfoContent>
             <div>
               <MapPin
-                color={theme.white}
-                style={{ backgroundColor: theme.purple }}
+                color={theme.colors.white}
+                style={{ backgroundColor: theme.colors.purple }}
                 size={32}
               />
 
@@ -53,8 +53,8 @@ export function Success() {
 
             <div>
               <Timer
-                color={theme.white}
-                style={{ backgroundColor: theme.yellow }}
+                color={theme.colors.white}
+                style={{ backgroundColor: theme.colors.yellow }}
                 size={32}
               />
 
@@ -67,8 +67,8 @@ export function Success() {
 
             <div>
               <CurrencyDollar
-                color={theme.white}
-                style={{ backgroundColor: theme['yellow-dark'] }}
+                color={theme.colors.white}
+                style={{ backgroundColor: theme.colors['yellow-dark'] }}
                 size={32}
               />
 
@@ -82,7 +82,7 @@ export function Success() {
         </Info>
       </Order>
 
-      <img src="src/assets/images/delivery.svg" alt="Pedido concluído" />
+      <img src="/images/delivery.svg" alt="Pedido concluído" />
     </Container>
   )
 }

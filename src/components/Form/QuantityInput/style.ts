@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   padding: 8px;
-  background-color: ${({ theme }) => theme['base-button']};
+  background-color: ${({ theme }) => theme.colors['base-button']};
   border-radius: 6px;
 
   display: flex;
@@ -15,17 +15,17 @@ export const Container = styled.div`
   }
 
   button svg {
-    color: ${({ theme }) => theme.purple};
+    color: ${({ theme }) => theme.colors.purple};
 
     transition: all 0.2s;
 
     &:hover {
-      color: ${({ theme }) => theme['purple-dark']};
+      color: ${({ theme }) => theme.colors['purple-dark']};
     }
   }
 
   span {
     padding-top: 2px;
-    color: ${({ theme }) => theme['base-title']};
+    color: ${({ theme }) => theme.colors['base-title']};
   }
 `
